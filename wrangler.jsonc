@@ -1,0 +1,33 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-ai-showcase",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-06",
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MY_DURABLE_OBJECT",
+        "class_name": "MyDurableObject"
+      }
+    ]
+  },
+  "migrations": [
+  {
+    "tag": "v1",
+    "new_sqlite_classes": ["MyDurableObject"]
+  }
+]
+}
