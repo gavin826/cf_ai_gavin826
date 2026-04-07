@@ -4,7 +4,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cloudflare-ai-showcase",
+  "name": "cloudflare-ai-gavinshowcase",
   "main": "src/index.ts",
   "compatibility_date": "2026-04-06",
   "observability": {
